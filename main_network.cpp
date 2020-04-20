@@ -66,7 +66,7 @@ int main(int argc, char **argv) {
 
             board_cell current_cell = {count / 8, count % 8};
 
-            if (game_state.check_move(game_state.who_moves(), past_cell, current_cell()) {
+            if (game_state.check_move(game_state.who_moves(), past_cell, current_cell)) {
               std::cerr << "Move: " << network.send_move(past_cell, current_cell) << "\n";
               game_state.move(game_state.who_moves(), past_cell, current_cell);
             }
